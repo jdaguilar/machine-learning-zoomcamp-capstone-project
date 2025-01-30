@@ -1,19 +1,140 @@
 <!-- templates/index.html -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Churn Prediction</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Churn Prediction</h1>
     <form action="/predict" method="post">
-        <!-- Add input fields for your features here -->
-        <input type="text" name="feature1" placeholder="Feature 1">
-        <input type="text" name="feature2" placeholder="Feature 2">
-        <!-- Add more fields as needed -->
-        <button type="submit">Predict</button>
+      <label for="status_of_existing_checking_account"
+        >Status of Existing Checking Account:</label
+      >
+      <select
+        name="status_of_existing_checking_account"
+        id="status_of_existing_checking_account"
+      >
+        <option value="A11">< 0 DM</option>
+        <option value="A12">0 <= ... < 200 DM</option>
+        <option value="A13">
+          >= 200 DM / salary assignments for at least 1 year
+        </option>
+        <option value="A14">no checking account</option></select
+      ><br />
+
+      <label for="credit_history">Credit History:</label>
+      <select name="credit_history" id="credit_history">
+        <option value="A30">
+          no credits taken/ all credits paid back duly
+        </option>
+        <option value="A31">all credits at this bank paid back duly</option>
+        <option value="A32">existing credits paid back duly till now</option>
+        <option value="A33">delay in paying off in the past</option>
+        <option value="A34">
+          critical account/ other credits existing (not at this bank)
+        </option></select
+      ><br />
+
+      <label for="purpose">Purpose:</label>
+      <select name="purpose" id="purpose">
+        <option value="A40">car (new)</option>
+        <option value="A41">car (used)</option>
+        <option value="A42">furniture/equipment</option>
+        <option value="A43">radio/television</option>
+        <option value="A44">domestic appliances</option>
+        <option value="A45">repairs</option>
+        <option value="A46">education</option>
+        <option value="A47">(vacation - does not exist?)</option>
+        <option value="A48">retraining</option>
+        <option value="A49">business</option>
+        <option value="A410">others</option></select
+      ><br />
+
+      <label for="savings_account_bonds">Savings Account/Bonds:</label>
+      <select name="savings_account_bonds" id="savings_account_bonds">
+        <option value="A61">< 100 DM</option>
+        <option value="A62">100 <= ... < 500 DM</option>
+        <option value="A63">500 <= ... < 1000 DM</option>
+        <option value="A64">>= 1000 DM</option>
+        <option value="A65">unknown/ no savings account</option></select
+      ><br />
+
+      <label for="present_employment_since">Present Employment Since:</label>
+      <select name="present_employment_since" id="present_employment_since">
+        <option value="A71">unemployed</option>
+        <option value="A72">< 1 year</option>
+        <option value="A73">1 <= ... < 4 years</option>
+        <option value="A74">4 <= ... < 7 years</option>
+        <option value="A75">>= 7 years</option></select
+      ><br />
+
+      <label for="personal_status_and_sex">Personal Status and Sex:</label>
+      <select name="personal_status_and_sex" id="personal_status_and_sex">
+        <option value="A91">male : divorced/separated</option>
+        <option value="A92">female : divorced/separated/married</option>
+        <option value="A93">male : single</option>
+        <option value="A94">male : married/widowed</option>
+        <option value="A95">female : single</option></select
+      ><br />
+
+      <label for="other_debtors_guarantors">Other Debtors/Guarantors:</label>
+      <select name="other_debtors_guarantors" id="other_debtors_guarantors">
+        <option value="A101">none</option>
+        <option value="A102">co-applicant</option>
+        <option value="A103">guarantor</option></select
+      ><br />
+
+      <label for="property">Property:</label>
+      <select name="property" id="property">
+        <option value="A121">real estate</option>
+        <option value="A122">
+          building society savings agreement/ life insurance
+        </option>
+        <option value="A123">car or other, not in attribute 6</option>
+        <option value="A124">unknown / no property</option></select
+      ><br />
+
+      <label for="other_installment_plans">Other Installment Plans:</label>
+      <select name="other_installment_plans" id="other_installment_plans">
+        <option value="A141">bank</option>
+        <option value="A142">stores</option>
+        <option value="A143">none</option></select
+      ><br />
+
+      <label for="housing">Housing:</label>
+      <select name="housing" id="housing">
+        <option value="A151">rent</option>
+        <option value="A152">own</option>
+        <option value="A153">for free</option></select
+      ><br />
+
+      <label for="job">Job:</label>
+      <select name="job" id="job">
+        <option value="A171">unemployed/ unskilled - non-resident</option>
+        <option value="A172">unskilled - resident</option>
+        <option value="A173">skilled employee / official</option>
+        <option value="A174">
+          management/ self-employed/ highly qualified employee/ officer
+        </option></select
+      ><br />
+
+      <label for="telephone">Telephone:</label>
+      <select name="telephone" id="telephone">
+        <option value="A191">none</option>
+        <option value="A192">
+          yes, registered under the customers name
+        </option></select
+      ><br />
+
+      <label for="foreign_worker">Foreign Worker:</label>
+      <select name="foreign_worker" id="foreign_worker">
+        <option value="A201">yes</option>
+        <option value="A202">no</option></select
+      ><br />
+
+      <button type="submit">Predict</button>
     </form>
-</body>
+  </body>
 </html>
