@@ -19,6 +19,7 @@
         <select
           name="status_of_existing_checking_account"
           id="status_of_existing_checking_account"
+          required
         >
           <option value="" disabled selected>Select your option</option>
           <option value="A11">< 0 DM</option>
@@ -30,7 +31,7 @@
         </select>
 
         <label for="credit_history">Credit History:</label>
-        <select name="credit_history" id="credit_history">
+        <select name="credit_history" id="credit_history" required>
           <option value="" disabled selected>Select your option</option>
           <option value="A30">
             no credits taken/ all credits paid back duly
@@ -44,7 +45,7 @@
         </select>
 
         <label for="purpose">Purpose:</label>
-        <select name="purpose" id="purpose">
+        <select name="purpose" id="purpose" required>
           <option value="" disabled selected>Select your option</option>
           <option value="A40">car (new)</option>
           <option value="A41">car (used)</option>
@@ -60,7 +61,11 @@
         </select>
 
         <label for="savings_account_bonds">Savings Account/Bonds:</label>
-        <select name="savings_account_bonds" id="savings_account_bonds">
+        <select
+          name="savings_account_bonds"
+          id="savings_account_bonds"
+          required
+        >
           <option value="" disabled selected>Select your option</option>
           <option value="A61">< 100 DM</option>
           <option value="A62">100 <= ... < 500 DM</option>
@@ -70,7 +75,11 @@
         </select>
 
         <label for="present_employment_since">Present Employment Since:</label>
-        <select name="present_employment_since" id="present_employment_since">
+        <select
+          name="present_employment_since"
+          id="present_employment_since"
+          required
+        >
           <option value="" disabled selected>Select your option</option>
           <option value="A71">unemployed</option>
           <option value="A72">< 1 year</option>
@@ -80,7 +89,11 @@
         </select>
 
         <label for="personal_status_and_sex">Personal Status and Sex:</label>
-        <select name="personal_status_and_sex" id="personal_status_and_sex">
+        <select
+          name="personal_status_and_sex"
+          id="personal_status_and_sex"
+          required
+        >
           <option value="" disabled selected>Select your option</option>
           <option value="A91">male : divorced/separated</option>
           <option value="A92">female : divorced/separated/married</option>
@@ -90,7 +103,11 @@
         </select>
 
         <label for="other_debtors_guarantors">Other Debtors/Guarantors:</label>
-        <select name="other_debtors_guarantors" id="other_debtors_guarantors">
+        <select
+          name="other_debtors_guarantors"
+          id="other_debtors_guarantors"
+          required
+        >
           <option value="" disabled selected>Select your option</option>
           <option value="A101">none</option>
           <option value="A102">co-applicant</option>
@@ -98,7 +115,7 @@
         </select>
 
         <label for="property">Property:</label>
-        <select name="property" id="property">
+        <select name="property" id="property" required>
           <option value="" disabled selected>Select your option</option>
           <option value="A121">real estate</option>
           <option value="A122">
@@ -109,7 +126,11 @@
         </select>
 
         <label for="other_installment_plans">Other Installment Plans:</label>
-        <select name="other_installment_plans" id="other_installment_plans">
+        <select
+          name="other_installment_plans"
+          id="other_installment_plans"
+          required
+        >
           <option value="" disabled selected>Select your option</option>
           <option value="A141">bank</option>
           <option value="A142">stores</option>
@@ -117,7 +138,7 @@
         </select>
 
         <label for="housing">Housing:</label>
-        <select name="housing" id="housing">
+        <select name="housing" id="housing" required>
           <option value="" disabled selected>Select your option</option>
           <option value="A151">rent</option>
           <option value="A152">own</option>
@@ -125,7 +146,7 @@
         </select>
 
         <label for="job">Job:</label>
-        <select name="job" id="job">
+        <select name="job" id="job" required>
           <option value="" disabled selected>Select your option</option>
           <option value="A171">unemployed/ unskilled - non-resident</option>
           <option value="A172">unskilled - resident</option>
@@ -136,14 +157,14 @@
         </select>
 
         <label for="telephone">Telephone:</label>
-        <select name="telephone" id="telephone">
+        <select name="telephone" id="telephone" required>
           <option value="" disabled selected>Select your option</option>
           <option value="A191">none</option>
           <option value="A192">yes, registered under the customers name</option>
         </select>
 
         <label for="foreign_worker">Foreign Worker:</label>
-        <select name="foreign_worker" id="foreign_worker">
+        <select name="foreign_worker" id="foreign_worker" required>
           <option value="" disabled selected>Select your option</option>
           <option value="A201">yes</option>
           <option value="A202">no</option>
