@@ -9,6 +9,7 @@
       href="{{ url_for('static', filename='css/styles.css') }}"
     />
   </head>
+
   <body>
     <div class="container">
       <h1>Churn Prediction</h1>
@@ -23,12 +24,12 @@
             required
           >
             <option value="" disabled selected>Select your option</option>
-            <option value="A11">< 0 DM</option>
-            <option value="A12">0 <= ... < 200 DM</option>
-            <option value="A13">
+            <option value="< 0 DM">< 0 DM</option>
+            <option value="0 <= ... < 200 DM">0 <= ... < 200 DM</option>
+            <option value=">= 200 DM / salary assignments for at least 1 year">
               >= 200 DM / salary assignments for at least 1 year
             </option>
-            <option value="A14">no checking account</option>
+            <option value="no checking account">no checking account</option>
           </select>
         </div>
 
@@ -36,15 +37,21 @@
           <label for="credit_history">Credit History:</label>
           <select name="credit_history" id="credit_history" required>
             <option value="" disabled selected>Select your option</option>
-            <option value="A30">
+            <option value="no credits taken/ all credits paid back duly">
               no credits taken/ all credits paid back duly
             </option>
-            <option value="A31">all credits at this bank paid back duly</option>
-            <option value="A32">
+            <option value="all credits at this bank paid back duly">
+              all credits at this bank paid back duly
+            </option>
+            <option value="existing credits paid back duly till now">
               existing credits paid back duly till now
             </option>
-            <option value="A33">delay in paying off in the past</option>
-            <option value="A34">
+            <option value="delay in paying off in the past">
+              delay in paying off in the past
+            </option>
+            <option
+              value="critical account/ other credits existing (not at this bank)"
+            >
               critical account/ other credits existing (not at this bank)
             </option>
           </select>
@@ -54,17 +61,19 @@
           <label for="purpose">Purpose:</label>
           <select name="purpose" id="purpose" required>
             <option value="" disabled selected>Select your option</option>
-            <option value="A40">car (new)</option>
-            <option value="A41">car (used)</option>
-            <option value="A42">furniture/equipment</option>
-            <option value="A43">radio/television</option>
-            <option value="A44">domestic appliances</option>
-            <option value="A45">repairs</option>
-            <option value="A46">education</option>
-            <option value="A47">(vacation - does not exist?)</option>
-            <option value="A48">retraining</option>
-            <option value="A49">business</option>
-            <option value="A410">others</option>
+            <option value="car (new)">car (new)</option>
+            <option value="car (used)">car (used)</option>
+            <option value="furniture/equipment">furniture/equipment</option>
+            <option value="radio/television">radio/television</option>
+            <option value="domestic appliances">domestic appliances</option>
+            <option value="repairs">repairs</option>
+            <option value="education">education</option>
+            <option value="(vacation - does not exist?)">
+              (vacation - does not exist?)
+            </option>
+            <option value="retraining">retraining</option>
+            <option value="business">business</option>
+            <option value="others">others</option>
           </select>
         </div>
 
@@ -76,11 +85,13 @@
             required
           >
             <option value="" disabled selected>Select your option</option>
-            <option value="A61">< 100 DM</option>
-            <option value="A62">100 <= ... < 500 DM</option>
-            <option value="A63">500 <= ... < 1000 DM</option>
-            <option value="A64">>= 1000 DM</option>
-            <option value="A65">unknown/ no savings account</option>
+            <option value="< 100 DM">< 100 DM</option>
+            <option value="100 <= ... < 500 DM">100 <= ... < 500 DM</option>
+            <option value="500 <= ... < 1000 DM">500 <= ... < 1000 DM</option>
+            <option value=">= 1000 DM">>= 1000 DM</option>
+            <option value="unknown/ no savings account">
+              unknown/ no savings account
+            </option>
           </select>
         </div>
 
@@ -94,11 +105,11 @@
             required
           >
             <option value="" disabled selected>Select your option</option>
-            <option value="A71">unemployed</option>
-            <option value="A72">< 1 year</option>
-            <option value="A73">1 <= ... < 4 years</option>
-            <option value="A74">4 <= ... < 7 years</option>
-            <option value="A75">>= 7 years</option>
+            <option value="unemployed">unemployed</option>
+            <option value="< 1 year">< 1 year</option>
+            <option value="1 <= ... < 4 years">1 <= ... < 4 years</option>
+            <option value="4 <= ... < 7 years">4 <= ... < 7 years</option>
+            <option value=">= 7 years">>= 7 years</option>
           </select>
         </div>
 
@@ -110,11 +121,17 @@
             required
           >
             <option value="" disabled selected>Select your option</option>
-            <option value="A91">male : divorced/separated</option>
-            <option value="A92">female : divorced/separated/married</option>
-            <option value="A93">male : single</option>
-            <option value="A94">male : married/widowed</option>
-            <option value="A95">female : single</option>
+            <option value="male : divorced/separated">
+              male : divorced/separated
+            </option>
+            <option value="female : divorced/separated/married">
+              female : divorced/separated/married
+            </option>
+            <option value="male : single">male : single</option>
+            <option value="male : married/widowed">
+              male : married/widowed
+            </option>
+            <option value="female : single">female : single</option>
           </select>
         </div>
 
@@ -128,9 +145,9 @@
             required
           >
             <option value="" disabled selected>Select your option</option>
-            <option value="A101">none</option>
-            <option value="A102">co-applicant</option>
-            <option value="A103">guarantor</option>
+            <option value="none">none</option>
+            <option value="co-applicant">co-applicant</option>
+            <option value="guarantor">guarantor</option>
           </select>
         </div>
 
@@ -138,12 +155,14 @@
           <label for="property">Property:</label>
           <select name="property" id="property" required>
             <option value="" disabled selected>Select your option</option>
-            <option value="A121">real estate</option>
-            <option value="A122">
+            <option value="real estate">real estate</option>
+            <option value="building society savings agreement/ life insurance">
               building society savings agreement/ life insurance
             </option>
-            <option value="A123">car or other, not in attribute 6</option>
-            <option value="A124">unknown / no property</option>
+            <option value="car or other, not in attribute 6">
+              car or other, not in attribute 6
+            </option>
+            <option value="unknown / no property">unknown / no property</option>
           </select>
         </div>
 
@@ -155,9 +174,9 @@
             required
           >
             <option value="" disabled selected>Select your option</option>
-            <option value="A141">bank</option>
-            <option value="A142">stores</option>
-            <option value="A143">none</option>
+            <option value="bank">bank</option>
+            <option value="stores">stores</option>
+            <option value="none">none</option>
           </select>
         </div>
 
@@ -165,9 +184,9 @@
           <label for="housing">Housing:</label>
           <select name="housing" id="housing" required>
             <option value="" disabled selected>Select your option</option>
-            <option value="A151">rent</option>
-            <option value="A152">own</option>
-            <option value="A153">for free</option>
+            <option value="rent">rent</option>
+            <option value="own">own</option>
+            <option value="for free">for free</option>
           </select>
         </div>
 
@@ -175,10 +194,16 @@
           <label for="job">Job:</label>
           <select name="job" id="job" required>
             <option value="" disabled selected>Select your option</option>
-            <option value="A171">unemployed/ unskilled - non-resident</option>
-            <option value="A172">unskilled - resident</option>
-            <option value="A173">skilled employee / official</option>
-            <option value="A174">
+            <option value="unemployed/ unskilled - non-resident">
+              unemployed/ unskilled - non-resident
+            </option>
+            <option value="unskilled - resident">unskilled - resident</option>
+            <option value="skilled employee / official">
+              skilled employee / official
+            </option>
+            <option
+              value="management/ self-employed/ highly qualified employee/ officer"
+            >
               management/ self-employed/ highly qualified employee/ officer
             </option>
           </select>
@@ -188,8 +213,8 @@
           <label for="telephone">Telephone:</label>
           <select name="telephone" id="telephone" required>
             <option value="" disabled selected>Select your option</option>
-            <option value="A191">none</option>
-            <option value="A192">
+            <option value="none">none</option>
+            <option value="yes, registered under the customers name">
               yes, registered under the customers name
             </option>
           </select>
@@ -199,8 +224,8 @@
           <label for="foreign_worker">Foreign Worker:</label>
           <select name="foreign_worker" id="foreign_worker" required>
             <option value="" disabled selected>Select your option</option>
-            <option value="A201">yes</option>
-            <option value="A202">no</option>
+            <option value="yes">yes</option>
+            <option value="no">no</option>
           </select>
         </div>
 
@@ -216,7 +241,6 @@
           </button>
           <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
         </div>
-
       </form>
     </div>
     <script src="{{ url_for('static', filename='js/index.js') }}"></script>
