@@ -194,7 +194,8 @@
             </option>
           </select>
         </div>
-        <div class="step"></div>
+
+        <div class="step">
           <label for="foreign_worker">Foreign Worker:</label>
           <select name="foreign_worker" id="foreign_worker" required>
             <option value="" disabled selected>Select your option</option>
@@ -213,8 +214,9 @@
           <button type="button" id="prevBtn" onclick="nextPrev(-1)">
             Previous
           </button>
-          <button type="submit" id="submitBtn">Submit</button>
+          <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
         </div>
+
       </form>
     </div>
     <script src="{{ url_for('static', filename='js/index.js') }}"></script>
