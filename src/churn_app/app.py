@@ -1,29 +1,30 @@
 # app.py
 from flask import Flask, request, jsonify, render_template
 import pickle
-import numpy as np
-from extras.preprocessing import preprocess_input
 
 
 app = Flask(__name__)
 
 # Load the trained model
-with open('src/churn_app/models/log_reg_model.pkl', 'rb') as model_file:
-    model = pickle.load(model_file)
+with open("src/churn_app/models/log_reg_model.pkl", "rb") as f_in:
+    dv, model = pickle.load(f_in)
 
 
-@app.route('/')
+@app.route("/")
 def home():
-    return render_template('index.html')
+    return render_template("index.html")
 
 
-@app.route('/predict', methods=['POST'])
+@app.route("/predict", methods=["POST"])
 def predict():
     data = request.form.to_dict()
-    preprocessed_data = preprocess_input(data)
-    prediction = model.predict(preprocessed_data)
-    return jsonify({'prediction': int(prediction[0])})
+    preprocessed_data = dv.transform(data)
+    prediction = model.predict_proba(preprocessed_data)[0]
+    prediction = prediction.tolist()
+    y_pred = prediction[1] >= 0.6
+
+    return jsonify({"prediction": y_pred})
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.run(debug=True)
