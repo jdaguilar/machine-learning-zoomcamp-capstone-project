@@ -4,31 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Churn Prediction</title>
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='css/styles.css') }}"
-    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
   </head>
-
   <body>
     <div class="container">
       <h1>Churn Prediction</h1>
       <form id="churnForm" action="/predict" method="post">
         <div class="step active">
-          <label for="status_of_existing_checking_account"
-            >Status of Existing Checking Account:</label
-          >
-          <select
-            name="status_of_existing_checking_account"
-            id="status_of_existing_checking_account"
-            required
-          >
+          <label for="status_of_existing_checking_account">Status of Existing Checking Account:</label>
+          <select name="status_of_existing_checking_account" id="status_of_existing_checking_account" required>
             <option value="" disabled selected>Select your option</option>
             <option value="< 0 DM">< 0 DM</option>
             <option value="0 <= ... < 200 DM">0 <= ... < 200 DM</option>
-            <option value=">= 200 DM / salary assignments for at least 1 year">
-              >= 200 DM / salary assignments for at least 1 year
-            </option>
+            <option value=">= 200 DM / salary assignments for at least 1 year">>= 200 DM / salary assignments for at least 1 year</option>
             <option value="no checking account">no checking account</option>
           </select>
         </div>
@@ -37,23 +25,11 @@
           <label for="credit_history">Credit History:</label>
           <select name="credit_history" id="credit_history" required>
             <option value="" disabled selected>Select your option</option>
-            <option value="no credits taken/ all credits paid back duly">
-              no credits taken/ all credits paid back duly
-            </option>
-            <option value="all credits at this bank paid back duly">
-              all credits at this bank paid back duly
-            </option>
-            <option value="existing credits paid back duly till now">
-              existing credits paid back duly till now
-            </option>
-            <option value="delay in paying off in the past">
-              delay in paying off in the past
-            </option>
-            <option
-              value="critical account/ other credits existing (not at this bank)"
-            >
-              critical account/ other credits existing (not at this bank)
-            </option>
+            <option value="no credits taken/ all credits paid back duly">no credits taken/ all credits paid back duly</option>
+            <option value="all credits at this bank paid back duly">all credits at this bank paid back duly</option>
+            <option value="existing credits paid back duly till now">existing credits paid back duly till now</option>
+            <option value="delay in paying off in the past">delay in paying off in the past</option>
+            <option value="critical account/ other credits existing (not at this bank)">critical account/ other credits existing (not at this bank)</option>
           </select>
         </div>
 
@@ -68,9 +44,7 @@
             <option value="domestic appliances">domestic appliances</option>
             <option value="repairs">repairs</option>
             <option value="education">education</option>
-            <option value="(vacation - does not exist?)">
-              (vacation - does not exist?)
-            </option>
+            <option value="(vacation - does not exist?)">(vacation - does not exist?)</option>
             <option value="retraining">retraining</option>
             <option value="business">business</option>
             <option value="others">others</option>
@@ -79,31 +53,19 @@
 
         <div class="step">
           <label for="savings_account_bonds">Savings Account/Bonds:</label>
-          <select
-            name="savings_account_bonds"
-            id="savings_account_bonds"
-            required
-          >
+          <select name="savings_account_bonds" id="savings_account_bonds" required>
             <option value="" disabled selected>Select your option</option>
             <option value="< 100 DM">< 100 DM</option>
             <option value="100 <= ... < 500 DM">100 <= ... < 500 DM</option>
             <option value="500 <= ... < 1000 DM">500 <= ... < 1000 DM</option>
             <option value=">= 1000 DM">>= 1000 DM</option>
-            <option value="unknown/ no savings account">
-              unknown/ no savings account
-            </option>
+            <option value="unknown/ no savings account">unknown/ no savings account</option>
           </select>
         </div>
 
         <div class="step">
-          <label for="present_employment_since"
-            >Present Employment Since:</label
-          >
-          <select
-            name="present_employment_since"
-            id="present_employment_since"
-            required
-          >
+          <label for="present_employment_since">Present Employment Since:</label>
+          <select name="present_employment_since" id="present_employment_since" required>
             <option value="" disabled selected>Select your option</option>
             <option value="unemployed">unemployed</option>
             <option value="< 1 year">< 1 year</option>
@@ -115,35 +77,19 @@
 
         <div class="step">
           <label for="personal_status_and_sex">Personal Status and Sex:</label>
-          <select
-            name="personal_status_and_sex"
-            id="personal_status_and_sex"
-            required
-          >
+          <select name="personal_status_and_sex" id="personal_status_and_sex" required>
             <option value="" disabled selected>Select your option</option>
-            <option value="male : divorced/separated">
-              male : divorced/separated
-            </option>
-            <option value="female : divorced/separated/married">
-              female : divorced/separated/married
-            </option>
+            <option value="male : divorced/separated">male : divorced/separated</option>
+            <option value="female : divorced/separated/married">female : divorced/separated/married</option>
             <option value="male : single">male : single</option>
-            <option value="male : married/widowed">
-              male : married/widowed
-            </option>
+            <option value="male : married/widowed">male : married/widowed</option>
             <option value="female : single">female : single</option>
           </select>
         </div>
 
         <div class="step">
-          <label for="other_debtors_guarantors"
-            >Other Debtors/Guarantors:</label
-          >
-          <select
-            name="other_debtors_guarantors"
-            id="other_debtors_guarantors"
-            required
-          >
+          <label for="other_debtors_guarantors">Other Debtors/Guarantors:</label>
+          <select name="other_debtors_guarantors" id="other_debtors_guarantors" required>
             <option value="" disabled selected>Select your option</option>
             <option value="none">none</option>
             <option value="co-applicant">co-applicant</option>
@@ -156,23 +102,15 @@
           <select name="property" id="property" required>
             <option value="" disabled selected>Select your option</option>
             <option value="real estate">real estate</option>
-            <option value="building society savings agreement/ life insurance">
-              building society savings agreement/ life insurance
-            </option>
-            <option value="car or other, not in attribute 6">
-              car or other, not in attribute 6
-            </option>
+            <option value="building society savings agreement/ life insurance">building society savings agreement/ life insurance</option>
+            <option value="car or other, not in attribute 6">car or other, not in attribute 6</option>
             <option value="unknown / no property">unknown / no property</option>
           </select>
         </div>
 
         <div class="step">
           <label for="other_installment_plans">Other Installment Plans:</label>
-          <select
-            name="other_installment_plans"
-            id="other_installment_plans"
-            required
-          >
+          <select name="other_installment_plans" id="other_installment_plans" required>
             <option value="" disabled selected>Select your option</option>
             <option value="bank">bank</option>
             <option value="stores">stores</option>
@@ -194,18 +132,10 @@
           <label for="job">Job:</label>
           <select name="job" id="job" required>
             <option value="" disabled selected>Select your option</option>
-            <option value="unemployed/ unskilled - non-resident">
-              unemployed/ unskilled - non-resident
-            </option>
+            <option value="unemployed/ unskilled - non-resident">unemployed/ unskilled - non-resident</option>
             <option value="unskilled - resident">unskilled - resident</option>
-            <option value="skilled employee / official">
-              skilled employee / official
-            </option>
-            <option
-              value="management/ self-employed/ highly qualified employee/ officer"
-            >
-              management/ self-employed/ highly qualified employee/ officer
-            </option>
+            <option value="skilled employee / official">skilled employee / official</option>
+            <option value="management/ self-employed/ highly qualified employee/ officer">management/ self-employed/ highly qualified employee/ officer</option>
           </select>
         </div>
 
@@ -214,9 +144,7 @@
           <select name="telephone" id="telephone" required>
             <option value="" disabled selected>Select your option</option>
             <option value="none">none</option>
-            <option value="yes, registered under the customers name">
-              yes, registered under the customers name
-            </option>
+            <option value="yes, registered under the customers name">yes, registered under the customers name</option>
           </select>
         </div>
 
@@ -229,17 +157,15 @@
           </select>
         </div>
 
-        <!-- Preview step -->
         <div class="step">
           <h2>Preview Your Answers</h2>
           <div id="preview"></div>
         </div>
 
         <div class="buttons">
-          <button type="button" id="prevBtn" onclick="nextPrev(-1)">
-            Previous
-          </button>
+          <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
           <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+          <button type="submit" id="submitBtn" style="display: none;">Submit</button>
         </div>
       </form>
     </div>
