@@ -68,5 +68,5 @@ if __name__ == "__main__":
     y_pred = (y_pred_proba[:, 1] >= 0.6)
     y_pred = y_pred[0].astype(int)
 
-    with open("src/churn_app/models/log_reg_model.pkl", "wb") as file:
+    with open("src/creditability_app/models/log_reg_model.pkl", "wb") as file:
         pickle.dump((dv, log_reg_model), file)

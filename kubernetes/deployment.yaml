@@ -2,19 +2,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: churn-app-deployment
+  name: creditability-app-deployment
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: churn-app
+      app: creditability-app
   template:
     metadata:
       labels:
-        app: churn-app
+        app: creditability-app
     spec:
       containers:
-      - name: churn-app
-        image: churn-app:latest
+      - name: creditability-app
+        image: creditability-app:1.0.0
         ports:
         - containerPort: 5000

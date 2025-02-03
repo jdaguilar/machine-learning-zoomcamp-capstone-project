@@ -3,7 +3,7 @@ const steps = document.getElementsByClassName("step");
 const prevBtn = document.getElementById("prevBtn");
 const nextBtn = document.getElementById("nextBtn");
 const submitBtn = document.getElementById("submitBtn");
-const form = document.getElementById("churnForm");
+const form = document.getElementById("creditabilityForm");
 const previewDiv = document.getElementById("preview");
 
 showStep(currentStep);
@@ -11,9 +11,9 @@ showStep(currentStep);
 function showStep(n) {
   Array.from(steps).forEach(step => step.style.display = "none");
   steps[n].style.display = "block";
-  
+
   prevBtn.style.display = n === 0 ? "none" : "inline";
-  
+
   if (n === steps.length - 2) {
     nextBtn.innerHTML = "Preview";
     nextBtn.style.display = "inline";

@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Churn Prediction</title>
+    <title>creditability Prediction</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
   </head>
   <body>
     <div class="container">
-      <h1>Churn Prediction</h1>
-      <form id="churnForm" action="/predict" method="post">
+      <h1>creditability Prediction</h1>
+      <form id="creditabilityForm" action="/predict" method="post">
         <div class="step active">
           <label for="status_of_existing_checking_account">Status of Existing Checking Account:</label>
           <select name="status_of_existing_checking_account" id="status_of_existing_checking_account" required>

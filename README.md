@@ -46,9 +46,9 @@ minikube status
 
 Once Minikube is installed and running, you can proceed with the following commands to build and deploy your application.
 
-### Deploy Churn App in Minikube
+### Deploy creditability App in Minikube
 
-To deploy the Churn App in Minikube, we have to follow these steps:
+To deploy the creditability App in Minikube, we have to follow these steps:
 
 1. Set the docker-daemon from Minikube:
 
@@ -59,7 +59,7 @@ eval $(minikube -p minikube docker-env)
 2. Build Docker Image:
 
 ```sh
-docker build -t churn-app:1.0.0 .
+docker build -t creditability-app:1.0.0 .
 ```
 
 3. Apply Kubernetes Manifest:
@@ -90,7 +90,7 @@ minikube       Ready    control-plane,master   10d   v1.20.2   192.168.49.2   <n
 
 In this example, the Node IP is `192.168.49.2`.
 
-The `NodePort` for the churn-app-service is `30007`, so you can access your application through the following link:
+The `NodePort` for the creditability-app-service is `30007`, so you can access your application through the following link:
 
 ```sh
 http://192.168.49.2:30007

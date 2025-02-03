@@ -6,7 +6,7 @@ import pickle
 app = Flask(__name__)
 
 # Load the trained model
-with open("src/churn_app/models/log_reg_model.pkl", "rb") as f_in:
+with open("src/creditability_app/models/log_reg_model.pkl", "rb") as f_in:
     dv, model = pickle.load(f_in)
 
 
